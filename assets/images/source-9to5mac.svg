@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="macBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="60%" stop-color="#141c2e"/>
+      <stop offset="100%" stop-color="#060910"/>
+    </linearGradient>
+    <linearGradient id="macSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="macGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#macBg)"/>
+
+  <!-- Matrix Grid -->
+  <g stroke="rgba(148, 163, 184, 0.08)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="210" r="160" fill="#94a3b8" opacity="0.08" filter="url(#macGlow)"/>
+
+  <!-- Sleek Laptop / Display Outline -->
+  <g transform="translate(340, 95)">
+    <!-- Screen -->
+    <rect x="0" y="0" width="120" height="80" rx="8" fill="#1e293b" stroke="url(#macSilver)" stroke-width="2.5" filter="url(#macGlow)"/>
+    <rect x="10" y="10" width="100" height="60" rx="4" fill="#0f172a"/>
+    <!-- Base -->
+    <rect x="-15" y="82" width="150" height="8" rx="4" fill="url(#macSilver)"/>
+  </g>
+
+  <!-- Top Badge -->
+  <rect x="40" y="36" width="160" height="28" rx="6" fill="rgba(148, 163, 184, 0.12)" stroke="rgba(148, 163, 184, 0.4)"/>
+  <text x="120" y="55" fill="#cbd5e1" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">APPLE &amp; CROSS-OS</text>
+
+  <!-- Title & Publication Details -->
+  <text x="400" y="245" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" text-anchor="middle" letter-spacing="-0.02em">9TO5MAC</text>
+  <text x="400" y="280" fill="#cbd5e1" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">ECOSYSTEM • HARDWARE • NEWS</text>
+  <text x="400" y="315" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Apple Hardware, Software Ecosystem &amp; Cross-Platform News</text>
+</svg>

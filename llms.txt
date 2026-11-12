@@ -1,0 +1,24 @@
+# XEEDROID (https://dilshancode.github.io/xeedroid-web/)
+
+> XEEDROID is an independent technology platform, YouTube channel, and software resource hub specializing in practical Windows 11 tutorials, PC performance tuning, software walkthroughs, debloating techniques, and gadget reviews.
+
+## Core Topics & Expertise
+- **Windows 11 Setup & Optimization:** Official clean installation methods, bypassing hardware restrictions (TPM/CPU/RAM) via Rufus, privacy debloating, and background telemetry removal.
+- **System Utilities & Free Software:** Open-source power tools, disk cloning (Clonezilla, Macrium), virtualization (VMware Workstation, VirtualBox), and media production apps.
+- **Troubleshooting & Fixes:** Blue screen analysis, Windows update repair, driver installation guides, audio/video stutter resolution, and storage reclamation.
+- **Tech News & Software Releases:** Curated dispatches on open-source releases, Windows feature updates, and AI tooling.
+
+## Key Sections & Pages
+- **Home Hub:** https://dilshancode.github.io/xeedroid-web/ — Featured video masterclasses, latest uploads, and topic overview.
+- **Video Library:** https://dilshancode.github.io/xeedroid-web/videos.html — Complete searchable catalog of YouTube video tutorials with timestamps and step-by-step notes.
+- **Tech Dispatches & News:** https://dilshancode.github.io/xeedroid-web/posts.html — Tech updates, release roundups, and practical tips.
+- **About & Social Profiles:** https://dilshancode.github.io/xeedroid-web/about.html — Channel background, verified hardware specs, creator setup, and official community links.
+- **Editorial Standards:** https://dilshancode.github.io/xeedroid-web/editorial.html — Testing methodology, software safety guidelines, and independent review policy.
+
+## Official Community & Channels
+- YouTube: https://youtube.com/@xeedroid (Channel ID: UC2zxf0Xk-8KT7r4DE5E3hdg)
+- Patreon: https://patreon.com/xeedroid
+- Instagram: https://instagram.com/xeedroid
+- TikTok: https://tiktok.com/@xeedroid
+- X / Twitter: https://x.com/xeedroid
+

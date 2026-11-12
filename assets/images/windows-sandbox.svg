@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c1a"/>
+      <stop offset="60%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#03060f"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="sbGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#sbBg)"/>
+
+  <!-- Subtle Matrix grid lines -->
+  <g stroke="rgba(59, 130, 246, 0.08)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="280" cy="210" r="140" fill="#3b82f6" opacity="0.1" filter="url(#sbGlow)"/>
+  <circle cx="560" cy="220" r="110" fill="#00f0ff" opacity="0.1" filter="url(#sbGlow)"/>
+
+  <!-- Left: Isolated Sandbox Window Frame -->
+  <g transform="translate(80, 100)">
+    <!-- Main Window -->
+    <rect x="0" y="0" width="340" height="220" rx="10" fill="#0f172a" stroke="#3b82f6" stroke-width="2" filter="url(#sbGlow)"/>
+    <!-- Window Titlebar -->
+    <rect x="0" y="0" width="340" height="34" rx="10" fill="#1e293b"/>
+    <circle cx="18" cy="17" r="5" fill="#ef4444"/>
+    <circle cx="34" cy="17" r="5" fill="#f59e0b"/>
+    <circle cx="50" cy="17" r="5" fill="#10b981"/>
+    <text x="170" y="22" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Windows Sandbox (Isolated VM)</text>
+
+    <!-- Inside Content: Safe Execution Mockup -->
+    <rect x="20" y="50" width="300" height="60" rx="6" fill="#090d16" stroke="rgba(255,255,255,0.06)"/>
+    <text x="35" y="74" fill="#00f0ff" font-family="monospace" font-size="12">> testing_untrusted_app.exe</text>
+    <text x="35" y="94" fill="#10b981" font-family="monospace" font-size="11">✓ Sandboxed Container: 0 Host Access</text>
+
+    <rect x="20" y="125" width="140" height="70" rx="6" fill="#131e36" stroke="rgba(0,240,255,0.2)"/>
+    <text x="32" y="150" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Disposable VM</text>
+    <text x="32" y="172" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Auto-wiped on exit</text>
+
+    <rect x="180" y="125" width="140" height="70" rx="6" fill="#131e36" stroke="rgba(16,185,129,0.2)"/>
+    <text x="192" y="150" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700">100% Zero Risk</text>
+    <text x="192" y="172" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Host storage safe</text>
+  </g>
+
+  <!-- Right: Big Shield Graphic -->
+  <g transform="translate(520, 110)">
+    <!-- Outer Shield Contour -->
+    <path d="M 90 20 L 170 50 C 170 140 90 190 90 190 C 90 190 10 140 10 50 Z" fill="url(#shieldGrad)" filter="url(#sbGlow)"/>
+    <path d="M 90 32 L 158 58 C 158 132 90 176 90 176 C 90 176 22 132 22 58 Z" fill="#0b1329"/>
+    <!-- Windows 4-Square Flag inside shield -->
+    <rect x="62" y="70" width="24" height="24" fill="#00f0ff" rx="2"/>
+    <rect x="92" y="70" width="24" height="24" fill="#00f0ff" rx="2"/>
+    <rect x="62" y="100" width="24" height="24" fill="#00f0ff" rx="2"/>
+    <rect x="92" y="100" width="24" height="24" fill="#00f0ff" rx="2"/>
+  </g>
+
+  <!-- Top Badge -->
+  <rect x="40" y="36" width="160" height="28" rx="6" fill="rgba(59, 130, 246, 0.12)" stroke="rgba(59, 130, 246, 0.4)"/>
+  <text x="120" y="55" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">SECURITY &amp; SANDBOX</text>
+
+  <!-- Bottom Title -->
+  <text x="40" y="380" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800">Windows Sandbox Setup &amp; Safe Testing Guide</text>
+  <text x="40" y="410" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="16">Run Suspicious .EXE Files Without Risking Your Personal Windows System</text>
+</svg>

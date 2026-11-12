@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021c10"/>
+      <stop offset="60%" stop-color="#052e1b"/>
+      <stop offset="100%" stop-color="#01120a"/>
+    </linearGradient>
+    <linearGradient id="tcGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f576"/>
+      <stop offset="100%" stop-color="#00a850"/>
+    </linearGradient>
+    <filter id="tcGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#tcBg)"/>
+
+  <!-- Matrix Grid -->
+  <g stroke="rgba(0, 245, 118, 0.08)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="210" r="160" fill="#00f576" opacity="0.08" filter="url(#tcGlow)"/>
+
+  <!-- TechCrunch Iconic Block Logo (TC) -->
+  <g transform="translate(320, 100)">
+    <!-- T Block -->
+    <rect x="0" y="0" width="70" height="70" rx="8" fill="url(#tcGreen)" filter="url(#tcGlow)"/>
+    <text x="35" y="52" fill="#021c10" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" text-anchor="middle">T</text>
+    
+    <!-- C Block -->
+    <rect x="85" y="0" width="70" height="70" rx="8" fill="url(#tcGreen)" filter="url(#tcGlow)"/>
+    <text x="120" y="52" fill="#021c10" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" text-anchor="middle">C</text>
+  </g>
+
+  <!-- Top Badge -->
+  <rect x="40" y="36" width="160" height="28" rx="6" fill="rgba(0, 245, 118, 0.12)" stroke="rgba(0, 245, 118, 0.4)"/>
+  <text x="120" y="55" fill="#00f576" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">AI &amp; TECH NEWS</text>
+
+  <!-- Title & Publication Details -->
+  <text x="400" y="240" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" text-anchor="middle" letter-spacing="-0.02em">TECHCRUNCH</text>
+  <text x="400" y="280" fill="#00f576" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">ARTIFICIAL INTELLIGENCE &amp; STARTUPS</text>
+  <text x="400" y="320" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Live Industry Reporting &amp; Venture Coverage</text>
+</svg>

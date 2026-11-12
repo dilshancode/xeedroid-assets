@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-11-12T16:58:49.052Z",
+  "hashes": {
+    "public/css/tokens.css": "sha384-AjC7yQqA1TZz/u/YHOYj4F+10OA3aVnuvBtmQBMaDvbvcXjIg4L8IUIzCcGyU6GR",
+    "public/css/base.css": "sha384-wnkI41QRGW7qr6VZzGQ5HCtK0jhOpqgQQezQKoc3g8nb+MAmeL4izoFEeFC/7uQT",
+    "public/css/components.css": "sha384-gxLyl+XJmd0Kj027p5u0zkJ2FJLRmOmi81G2YkOUWebzsa2so0TxCdSPqygHU/xX",
+    "public/css/style.css": "sha384-pkNBIx4PF5znQ5pOdZgkdzbBE6JbLGeqBcxIt5cEIfJisABQ0sEIez2NQ396Xg4p",
+    "public/js/main.js": "sha384-P25zxXX5GGRDT9b3lv+x9EW1CqnmLzEzKzwo2CPZYHpJ2jc3X3CanaHmk2QeKmg0",
+    "public/js/video-catalog.js": "sha384-/gbTdLP0eLPbVcw8jg4aYHCwYpzHdBGe7TPNHtH0AlIsj6qkSDiwU1ZxHUotX4lD",
+    "public/js/youtube-api.js": "sha384-PqWZT/E0HtbOhvq6WmKdCpqqVFQ2XsP2qM5Hp5lujVO2C8dBGVnVFbZp0gQD4HNT",
+    "public/js/news-api.js": "sha384-JhPKQfPih7SAJs13BtplC8V36fjL0ZS7c4aEoezmruRWuAzbFjT1sinZxjns0YtC",
+    "public/js/videos-data.js": "sha384-L1pT7uuXTx9V4uPkkV9ktBEOgI4T4GSZie3wUzzIa/M44K3gswufLn3DkOkmUblN"
+  }
+}

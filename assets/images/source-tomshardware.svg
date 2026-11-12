@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="thBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140608"/>
+      <stop offset="60%" stop-color="#240c0f"/>
+      <stop offset="100%" stop-color="#0d0405"/>
+    </linearGradient>
+    <linearGradient id="thRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff334b"/>
+      <stop offset="100%" stop-color="#cc1129"/>
+    </linearGradient>
+    <filter id="thGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#thBg)"/>
+
+  <!-- Circuit Lines -->
+  <g stroke="rgba(255, 51, 75, 0.08)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="210" r="160" fill="#ff334b" opacity="0.08" filter="url(#thGlow)"/>
+
+  <!-- CPU Socket Visual Center -->
+  <g transform="translate(340, 90)">
+    <rect x="0" y="0" width="120" height="120" rx="12" fill="#1f0e11" stroke="url(#thRed)" stroke-width="3" filter="url(#thGlow)"/>
+    <rect x="20" y="20" width="80" height="80" rx="6" fill="#2d1419" stroke="rgba(255,255,255,0.1)"/>
+    <!-- CPU Die core -->
+    <rect x="36" y="36" width="48" height="48" rx="4" fill="url(#thRed)"/>
+    <text x="60" y="66" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="900" text-anchor="middle">CPU</text>
+  </g>
+
+  <!-- Top Badge -->
+  <rect x="40" y="36" width="180" height="28" rx="6" fill="rgba(255, 51, 75, 0.12)" stroke="rgba(255, 51, 75, 0.4)"/>
+  <text x="130" y="55" fill="#ff4d63" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">HARDWARE &amp; BENCHMARKS</text>
+
+  <!-- Title & Publication Details -->
+  <text x="400" y="260" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" text-anchor="middle" letter-spacing="-0.02em">TOM'S HARDWARE</text>
+  <text x="400" y="295" fill="#ff4d63" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">CPUS • GPUS • PC COMPONENTS</text>
+  <text x="400" y="330" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Verified Benchmarks &amp; In-Depth Hardware Analysis</text>
+</svg>

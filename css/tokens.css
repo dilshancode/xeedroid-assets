@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Figtree:ital,wght@0,400..700;1,400..600&family=Instrument+Serif:ital@0;1&display=swap');
+
+/**
+ * XEEDROID - Cyber-Obsidian & Neon Pulse Design Tokens
+ * Primary mode: DARK MODE (High-Octane Tech Creator Workstation)
+ * Refined Light Mode overrides via [data-theme="light"] or .light
+ */
+
+:root {
+  /* ==========================================================================
+     SURFACE & BACKGROUND (Default: Deep Cosmic Obsidian & Obsidian Glass)
+     ========================================================================== */
+  --bg-primary: #07090e;
+  --bg-secondary: #0b0f19;
+  --bg-tertiary: #101524;
+  
+  --surface-lowest: #0d121f;
+  --surface-low: #121929;
+  --surface-mid: #182238;
+  --surface-high: #202d4a;
+  --surface-highest: #2b3b5f;
+
+  /* Typography Colors (Ultra Crisp Contrast) */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverse: #07090e;
+
+  /* Structural & Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.24);
+  --border-glow: rgba(0, 240, 255, 0.35);
+
+  /* Primary Accent: Electric Cyan & Neon Cobalt (Futuristic Tech) */
+  --accent: #9a7be8;
+  --accent-hover: #b29bf2;
+  --accent-light: rgba(154, 123, 232, 0.12);
+  --accent-glow: rgba(154, 123, 232, 0.28);
+  --accent-container: #9a7be8;
+  --on-accent-container: #07090e;
+  --accent-fixed: rgba(154, 123, 232, 0.14);
+  --on-accent-fixed: #38e1ff;
+
+  /* Secondary Accent: Hyper-Blue */
+  --accent-blue: #9a7be8;
+  --accent-blue-hover: #b29bf2;
+  --accent-blue-glow: rgba(154, 123, 232, 0.28);
+
+  /* Tertiary Accent: Cyber Violet / Hyper-Purple */
+  --tertiary: #a855f7;
+  --tertiary-hover: #c084fc;
+  --tertiary-container: #a855f7;
+  --tertiary-fixed: rgba(168, 85, 247, 0.15);
+  --on-tertiary-fixed: #d8b4fe;
+
+  /* Status & Brand Accents */
+  --accent-warm: #fbbf24;
+  --accent-amber: #f59e0b;
+  --accent-success: #10b981;
+  --accent-emerald: #059669;
+  --accent-yt: #ff2a44;
+  --accent-yt-hover: #e01f37;
+  --accent-yt-glow: rgba(255, 42, 68, 0.4);
+
+  /* High-Tech Shadows & Ambient Glows (Raycast & Linear Inset Depth) */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-md: 0 8px 20px -4px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-xl: 0 24px 56px -12px rgba(0, 0, 0, 0.9), 0 0 2px 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  --shadow-accent: 0 0 24px -2px rgba(0, 240, 255, 0.35);
+  --shadow-yt: 0 0 24px -2px rgba(255, 42, 68, 0.4);
+  --shadow-3d: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  /* Header & Glass Tokens (Frosted Obsidian Glass) */
+  --header-bg: rgba(7, 9, 14, 0.82);
+  --header-blur: blur(20px) saturate(190%);
+  --glass-bg: rgba(13, 18, 31, 0.75);
+  --glass-bg-hover: rgba(18, 25, 41, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-subtle: rgba(255, 255, 255, 0.05);
+  --glass-blur: blur(24px) saturate(190%);
+  --glass-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --glass-shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 24px rgba(0, 240, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  /* Typography Families */
+  --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'DM Mono', 'Geist Mono', 'SF Mono', Menlo, Consolas, monospace;
+  --font-omarchy: 'Bricolage Grotesque', sans-serif;
+  --font-subhead: 'Figtree', sans-serif;
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-default: 16px;
+  --radius-md: 22px;
+  --radius-lg: 30px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* Container */
+  --container-max-width: 1400px;
+  --page-padding-mobile: 1.25rem;
+  --page-padding-desktop: 2.25rem;
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Scrollbar Palette */
+  --scrollbar-track: #07090e;
+  --scrollbar-thumb: #1a243d;
+  --scrollbar-thumb-hover: #2b3b5f;
+
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   REFINED LIGHT MODE (Crisp Titanium & Studio Glass — NOT Bland AI White!)
+   ========================================================================== */
+[data-theme="light"],
+.light {
+  --bg-primary: #f3f5f9;
+  --bg-secondary: #e7ecf4;
+  --bg-tertiary: #dce3ee;
+
+  --surface-lowest: #ffffff;
+  --surface-low: #f8fafc;
+  --surface-mid: #e9eef6;
+  --surface-high: #d8e2f0;
+  --surface-highest: #c4d3e6;
+
+  --text-primary: #090e17;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  --text-inverse: #ffffff;
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.14);
+  --border-strong: rgba(15, 23, 42, 0.22);
+  --border-glow: rgba(0, 140, 255, 0.4);
+
+  /* XEEDROID violet with a warm creator-brand highlight */
+  --accent: #6842c2;
+  --accent-hover: #5532a7;
+  --accent-light: rgba(104, 66, 194, 0.1);
+  --accent-glow: rgba(104, 66, 194, 0.22);
+  --accent-container: #6842c2;
+  --on-accent-container: #ffffff;
+  --accent-fixed: #e0f2fe;
+  --on-accent-fixed: #4f348b;
+
+  --accent-blue: #6842c2;
+  --accent-blue-hover: #5532a7;
+  --accent-blue-glow: rgba(104, 66, 194, 0.22);
+
+  --tertiary: #7c3aed;
+  --tertiary-hover: #6d28d9;
+  --tertiary-container: #7c3aed;
+  --tertiary-fixed: #f5f3ff;
+  --on-tertiary-fixed: #5b21b6;
+
+  --accent-warm: #d97706;
+  --accent-amber: #b45309;
+  --accent-success: #059669;
+  --accent-emerald: #047857;
+  --accent-yt: #ef4444;
+  --accent-yt-hover: #dc2626;
+  --accent-yt-glow: rgba(239, 68, 68, 0.35);
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --shadow-md: 0 6px 16px -2px rgba(15, 23, 42, 0.08), 0 0 1px 1px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --shadow-lg: 0 14px 30px -4px rgba(15, 23, 42, 0.1), 0 0 1px 1px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
+  --shadow-xl: 0 22px 48px -8px rgba(15, 23, 42, 0.14), 0 0 2px 1px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
+  --shadow-accent: 0 4px 18px -2px rgba(104, 66, 194, 0.22);
+  --shadow-yt: 0 4px 18px -2px rgba(239, 68, 68, 0.3);
+  --shadow-3d: 0 2px 10px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  --header-bg: rgba(243, 245, 249, 0.85);
+  --header-blur: blur(18px) saturate(180%);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-bg-hover: rgba(255, 255, 255, 0.96);
+  --glass-border: rgba(15, 23, 42, 0.09);
+  --glass-border-subtle: rgba(15, 23, 42, 0.05);
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-shadow: 0 10px 30px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --glass-shadow-hover: 0 16px 40px rgba(15, 23, 42, 0.1), 0 0 20px rgba(104, 66, 194, 0.1);
+
+  --scrollbar-track: #f3f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+
+  color-scheme: light;
+}
+
+/* ==========================================================================
+   PALETTE PRESET 0: CYBER COBALT (Neon Violet / Cobalt)
+   ========================================================================== */
+[data-palette="cobalt"] {
+  --bg-primary: #07090e;
+  --bg-secondary: #0b0f19;
+  --bg-tertiary: #101524;
+  --surface-lowest: #0d121f;
+  --surface-low: #121929;
+  --surface-mid: #182238;
+  --surface-high: #202d4a;
+  --surface-highest: #2b3b5f;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #9a7be8;
+  --accent-hover: #b29bf2;
+  --accent-button: #9a7be8;
+  --accent-button-hover: #b29bf2;
+  --accent-light: rgba(154, 123, 232, 0.12);
+  --accent-glow: rgba(154, 123, 232, 0.28);
+  --accent-container: #9a7be8;
+  --on-accent-container: #07090e;
+  --accent-blue: #9a7be8;
+  --accent-blue-hover: #b29bf2;
+  --tertiary: #a855f7;
+  --brand-gradient: linear-gradient(110deg, #9a7be8 0%, #a855f7 58%, #00f0ff 100%);
+  --border-glow: rgba(0, 240, 255, 0.35);
+  --shadow-accent: 0 4px 20px rgba(154, 123, 232, 0.3);
+}
+
+[data-theme="light"][data-palette="cobalt"],
+.light[data-palette="cobalt"] {
+  --accent: #6842c2;
+  --accent-hover: #5532a7;
+  --accent-button: #6842c2;
+  --accent-button-hover: #5532a7;
+  --accent-light: rgba(104, 66, 194, 0.1);
+  --accent-glow: rgba(104, 66, 194, 0.22);
+  --brand-gradient: linear-gradient(110deg, #6842c2 0%, #9b4fbd 58%, #ec8248 100%);
+  --shadow-accent: 0 4px 16px rgba(104, 66, 194, 0.2);
+}
+
+/* ==========================================================================
+   PALETTE PRESET 1: LINEAR VOID (Obsidian & Electric Indigo)
+   Inspired by Linear (design-md/linear.app)
+   ========================================================================== */
+[data-palette="linear"] {
+  --bg-primary: #08090a;
+  --bg-secondary: #0f1011;
+  --bg-tertiary: #141516;
+  --surface-lowest: #0c0d0e;
+  --surface-low: #121315;
+  --surface-mid: #191a1b;
+  --surface-high: #23252a;
+  --surface-highest: #28282c;
+
+  --accent: #5e6ad2;
+  --accent-hover: #7170ff;
+  --accent-button: #5e6ad2;
+  --accent-button-hover: #7170ff;
+  --accent-light: rgba(94, 106, 210, 0.14);
+  --accent-glow: rgba(113, 112, 255, 0.3);
+  --accent-container: #5e6ad2;
+  --on-accent-container: #ffffff;
+  --accent-fixed: rgba(94, 106, 210, 0.15);
+  --on-accent-fixed: #828fff;
+
+  --accent-blue: #5e6ad2;
+  --accent-blue-hover: #7170ff;
+  --accent-blue-glow: rgba(94, 106, 210, 0.3);
+
+  --brand-gradient: linear-gradient(110deg, #5e6ad2 0%, #828fff 58%, #9ca6ff 100%);
+
+  --tertiary: #828fff;
+  --tertiary-hover: #9ca6ff;
+  --tertiary-container: #5e6ad2;
+  --border-glow: rgba(113, 112, 255, 0.4);
+  --shadow-accent: 0 4px 20px rgba(94, 106, 210, 0.3);
+}
+
+[data-theme="light"][data-palette="linear"],
+.light[data-palette="linear"] {
+  --accent: #5e6ad2;
+  --accent-hover: #4e5ac0;
+  --accent-button: #5e6ad2;
+  --accent-button-hover: #4e5ac0;
+  --accent-light: rgba(94, 106, 210, 0.12);
+  --accent-glow: rgba(94, 106, 210, 0.25);
+  --accent-container: #5e6ad2;
+  --on-accent-container: #ffffff;
+  --accent-blue: #5e6ad2;
+  --accent-blue-hover: #4e5ac0;
+  --brand-gradient: linear-gradient(110deg, #5e6ad2 0%, #707ce4 58%, #828fff 100%);
+  --shadow-accent: 0 4px 16px rgba(94, 106, 210, 0.22);
+}
+
+/* ==========================================================================
+   PALETTE PRESET 2: RAYCAST PULSE (Stealth Carbon & Crimson Pulse)
+   Inspired by Raycast (design-md/raycast)
+   ========================================================================== */
+[data-palette="raycast"] {
+  --bg-primary: #0a0c10;
+  --bg-secondary: #0f1217;
+  --bg-tertiary: #151921;
+  --surface-lowest: #0d1015;
+  --surface-low: #13171e;
+  --surface-mid: #1a1f29;
+  --surface-high: #232937;
+  --surface-highest: #2e3647;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #9aa5b8;
+  --text-muted: #647087;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.24);
+  --border-glow: rgba(255, 99, 99, 0.4);
+
+  --accent: #ff6b6b;
+  --accent-hover: #ff8282;
+  --accent-button: #b82d32;
+  --accent-button-hover: #c9353b;
+  --accent-light: rgba(255, 107, 107, 0.12);
+  --accent-glow: rgba(184, 45, 50, 0.25);
+  --accent-container: #8c1e22;
+  --on-accent-container: #ffffff;
+  --accent-fixed: rgba(255, 107, 107, 0.14);
+  --on-accent-fixed: #ffa8a8;
+
+  --accent-blue: #55b3ff;
+  --accent-blue-hover: #77c5ff;
+  --accent-blue-glow: rgba(85, 179, 255, 0.3);
+
+  --brand-gradient: linear-gradient(110deg, #b82d32 0%, #9e2428 55%, #851b1e 100%);
+
+  --tertiary: #d9484d;
+  --tertiary-hover: #e6555a;
+  --tertiary-container: #8c1e22;
+  --shadow-accent: 0 4px 16px rgba(184, 45, 50, 0.28);
+}
+
+[data-theme="light"][data-palette="raycast"],
+.light[data-palette="raycast"] {
+  --bg-primary: #f6f7fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eceef3;
+  --surface-lowest: #ffffff;
+  --surface-low: #f9fafb;
+  --surface-mid: #eef0f5;
+  --surface-high: #e2e5ec;
+  --surface-highest: #d3d8e3;
+
+  --text-primary: #121417;
+  --text-secondary: #4b5565;
+  --text-muted: #6b7280;
+
+  --border-subtle: rgba(18, 20, 24, 0.08);
+  --border-medium: rgba(18, 20, 24, 0.14);
+  --border-strong: rgba(18, 20, 24, 0.22);
+  --border-glow: rgba(229, 72, 77, 0.3);
+
+  --accent: #e5484d;
+  --accent-hover: #d13438;
+  --accent-button: #e5484d;
+  --accent-button-hover: #ce2c31;
+  --accent-light: rgba(229, 72, 77, 0.12);
+  --accent-glow: rgba(229, 72, 77, 0.25);
+  --accent-container: #e5484d;
+  --on-accent-container: #ffffff;
+  --accent-fixed: #feebee;
+  --on-accent-fixed: #b3262b;
+
+  --accent-blue: #0284c7;
+  --accent-blue-hover: #0369a1;
+
+  --tertiary: #f06548;
+  --tertiary-hover: #e55335;
+  --tertiary-container: #e5484d;
+
+  --brand-gradient: linear-gradient(110deg, #e5484d 0%, #f06a4b 55%, #f78d46 100%);
+  --shadow-accent: 0 4px 16px rgba(229, 72, 77, 0.22);
+}
+
+/* ==========================================================================
+   PALETTE PRESET 3: MATRIX EMERALD (Supabase / Mintlify / Terminal Green)
+   Inspired by Supabase (design-md/supabase) & Mintlify (design-md/mintlify)
+   ========================================================================== */
+[data-palette="emerald"] {
+  --bg-primary: #0a0d0c;
+  --bg-secondary: #0f1412;
+  --bg-tertiary: #141b18;
+  --surface-lowest: #0d1210;
+  --surface-low: #121815;
+  --surface-mid: #18221e;
+  --surface-high: #202e29;
+  --surface-highest: #2b3d36;
+
+  --accent: #3ecf8e;
+  --accent-hover: #5ee1a4;
+  --accent-button: #3ecf8e;
+  --accent-button-hover: #5ee1a4;
+  --accent-light: rgba(62, 207, 142, 0.14);
+  --accent-glow: rgba(62, 207, 142, 0.32);
+  --accent-container: #3ecf8e;
+  --on-accent-container: #0a0d0c;
+  --accent-fixed: rgba(62, 207, 142, 0.15);
+  --on-accent-fixed: #8bf0c1;
+
+  --accent-blue: #3ecf8e;
+  --accent-blue-hover: #5ee1a4;
+  --accent-blue-glow: rgba(62, 207, 142, 0.3);
+
+  --brand-gradient: linear-gradient(110deg, #3ecf8e 0%, #10b981 58%, #059669 100%);
+
+  --tertiary: #10b981;
+  --tertiary-hover: #34d399;
+  --tertiary-container: #10b981;
+  --border-glow: rgba(62, 207, 142, 0.4);
+  --shadow-accent: 0 4px 20px rgba(62, 207, 142, 0.3);
+}
+
+[data-theme="light"][data-palette="emerald"],
+.light[data-palette="emerald"] {
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-button: #059669;
+  --accent-button-hover: #047857;
+  --accent-light: rgba(5, 150, 105, 0.12);
+  --accent-glow: rgba(5, 150, 105, 0.25);
+  --accent-container: #059669;
+  --on-accent-container: #ffffff;
+  --accent-blue: #059669;
+  --accent-blue-hover: #047857;
+  --brand-gradient: linear-gradient(110deg, #059669 0%, #10b981 58%, #3ecf8e 100%);
+  --shadow-accent: 0 4px 16px rgba(5, 150, 105, 0.22);
+}
+
+/* ==========================================================================
+   PALETTE PRESET 4: CLAUDE EDITORIAL (Warm Parchment / Terracotta & Dusk)
+   Inspired by Claude (design-md/claude) & Warp (design-md/warp)
+   ========================================================================== */
+[data-palette="warm"] {
+  --bg-primary: #141413;
+  --bg-secondary: #1a1a18;
+  --bg-tertiary: #222220;
+  --surface-lowest: #171716;
+  --surface-low: #1d1d1b;
+  --surface-mid: #252523;
+  --surface-high: #2f2f2c;
+  --surface-highest: #3a3a37;
+
+  --accent: #c96442;
+  --accent-hover: #d97757;
+  --accent-button: #c96442;
+  --accent-button-hover: #d97757;
+  --accent-light: rgba(201, 100, 66, 0.15);
+  --accent-glow: rgba(201, 100, 66, 0.32);
+  --accent-container: #c96442;
+  --on-accent-container: #ffffff;
+  --accent-fixed: rgba(201, 100, 66, 0.16);
+  --on-accent-fixed: #f4a282;
+
+  --accent-blue: #d97757;
+  --accent-blue-hover: #e88d6f;
+  --accent-blue-glow: rgba(217, 119, 87, 0.3);
+
+  --brand-gradient: linear-gradient(110deg, #c96442 0%, #d97757 58%, #eab308 100%);
+
+  --tertiary: #eab308;
+  --tertiary-hover: #facc15;
+  --tertiary-container: #c96442;
+  --border-glow: rgba(201, 100, 66, 0.4);
+  --shadow-accent: 0 4px 20px rgba(201, 100, 66, 0.3);
+}
+
+[data-theme="light"][data-palette="warm"],
+.light[data-palette="warm"] {
+  --bg-primary: #f5f4ed;
+  --bg-secondary: #eceae1;
+  --bg-tertiary: #e2dfd4;
+  --surface-lowest: #ffffff;
+  --surface-low: #faf9f5;
+  --surface-mid: #f0eee6;
+  --surface-high: #e5e2d6;
+  --surface-highest: #dad6c7;
+
+  --text-primary: #141413;
+  --text-secondary: #4d4c48;
+  --text-muted: #74736d;
+
+  --accent: #c96442;
+  --accent-hover: #b25434;
+  --accent-button: #c96442;
+  --accent-button-hover: #b25434;
+  --accent-light: rgba(201, 100, 66, 0.12);
+  --accent-glow: rgba(201, 100, 66, 0.25);
+  --accent-container: #c96442;
+  --on-accent-container: #ffffff;
+  --accent-blue: #c96442;
+  --accent-blue-hover: #b25434;
+  --brand-gradient: linear-gradient(110deg, #c96442 0%, #d97757 58%, #eab308 100%);
+  --shadow-accent: 0 4px 16px rgba(201, 100, 66, 0.22);
+}

@@ -1,0 +1,85 @@
+{
+  "timestamp": 1794502666449,
+  "articles": [
+    {
+      "id": "https://www.theverge.com/?p=1031260",
+      "title": "Jensen Huang is out. What did China want from him?",
+      "link": "https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump",
+      "pubDate": "2026-11-12 16:30:00",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "Today, we’re talking about the Jensen Huang scandal at Nvidia, which is developing so quickly that we had to do an emergency update of this intro minutes before publishing this epi",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?p=1032028",
+      "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ amid CEO shakeup",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
+      "pubDate": "2026-11-12 15:48:12",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "Jensen Huang resigned as CEO of Nvidia this morning, a company he co-founded in 1993. The decision came following the company's board opening an investigation into multiple extrama",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?p=1031951",
+      "title": "A power bank that can quickly charge three gadgets is just $49",
+      "link": "https://www.theverge.com/gadgets/1031951/fast-laptop-power-bank-battery-obsession-gaming-deal-sale",
+      "pubDate": "2026-11-12 15:19:58",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "Amazon Prime subscribers can jump on a pretty nice deal happening on Ecoflow’s laptop power bank that can deliver up to 140W of power through either of its two USB-C ports. You can",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?post_type=vm_stream&amp;p=1030422",
+      "title": "Nvidia CEO Jensen Huang has resigned. What happens next?",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "pubDate": "2026-11-12 15:01:31",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an invest",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?p=1031889",
+      "title": "Lego’s BrickLink marketplace has been offline for a week following ‘unusual activity’",
+      "link": "https://www.theverge.com/tech/1031889/lego-bricklink-marketplace-offline-unusual-activity",
+      "pubDate": "2026-11-12 14:13:58",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "Bricklink, a popular online marketplace that Lego bought in 2019 where fans can buy and sell parts and sets, has been down for a week and the company doesn't know when it will retu",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?p=1031868",
+      "title": "I reviewed the Apple HomeView, ask me anything",
+      "link": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
+      "pubDate": "2026-11-12 14:10:00",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "Hi! I'm Jen Tuohy, The Verge's senior smart home reviewer. I've tested every smart display Amazon and Google have ever made, and for the past week I've been testing Apple's first: ",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?p=1031633",
+      "title": "The pricey new Apple TV 4K is still the best streamer around",
+      "link": "https://www.theverge.com/tech/1031633/apple-tv-4k-4th-gen-review",
+      "pubDate": "2026-11-12 14:00:00",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "I'm sitting in front of my TV, puppy nuzzled up next to me, with four HomePods spread around my living room - two flanking my TV and one at either end of my couch - connected to th",
+      "thumbnail": ""
+    },
+    {
+      "id": "https://www.theverge.com/?p=1031647",
+      "title": "I tried Google’s AI glasses and Meta’s finally got real competition",
+      "link": "https://www.theverge.com/tech/1031647/google-android-xr-warby-parker-gentle-monster-hands-on",
+      "pubDate": "2026-11-12 14:00:00",
+      "source": "The Verge",
+      "category": "ai",
+      "description": "It's a weird time to launch a new pair of smart glasses. These last few years, Meta has been the dominant player in pushing a fragile smart glasses resurgence. Unfortunately, its p",
+      "thumbnail": ""
+    }
+  ]
+}

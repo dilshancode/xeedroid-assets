@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ignBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c0507"/>
+      <stop offset="60%" stop-color="#2d0a0d"/>
+      <stop offset="100%" stop-color="#120304"/>
+    </linearGradient>
+    <linearGradient id="ignRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a35"/>
+      <stop offset="100%" stop-color="#bf0619"/>
+    </linearGradient>
+    <filter id="ignGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#ignBg)"/>
+
+  <!-- Matrix Grid -->
+  <g stroke="rgba(255, 26, 53, 0.08)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="400" cy="210" r="160" fill="#ff1a35" opacity="0.08" filter="url(#ignGlow)"/>
+
+  <!-- Gaming Controller Icon Graphic -->
+  <g transform="translate(345, 95)">
+    <!-- Controller Body -->
+    <rect x="0" y="10" width="110" height="70" rx="20" fill="url(#ignRed)" filter="url(#ignGlow)"/>
+    <!-- D-pad -->
+    <rect x="18" y="38" width="24" height="8" rx="2" fill="#ffffff"/>
+    <rect x="26" y="30" width="8" height="24" rx="2" fill="#ffffff"/>
+    <!-- ABXY Buttons -->
+    <circle cx="82" cy="36" r="4.5" fill="#ffffff"/>
+    <circle cx="92" cy="46" r="4.5" fill="#ffffff"/>
+    <circle cx="72" cy="46" r="4.5" fill="#ffffff"/>
+    <circle cx="82" cy="56" r="4.5" fill="#ffffff"/>
+  </g>
+
+  <!-- Top Badge -->
+  <rect x="40" y="36" width="160" height="28" rx="6" fill="rgba(255, 26, 53, 0.12)" stroke="rgba(255, 26, 53, 0.4)"/>
+  <text x="120" y="55" fill="#ff4d63" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="1">GAMING TECH &amp; PC</text>
+
+  <!-- Title & Publication Details -->
+  <text x="400" y="245" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="900" text-anchor="middle" letter-spacing="-0.02em">IGN</text>
+  <text x="400" y="280" fill="#ff4d63" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="2">PC GAMING • HARDWARE • REVIEWS</text>
+  <text x="400" y="315" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Video Games, PC Benchmarks &amp; Entertainment</text>
+</svg>
