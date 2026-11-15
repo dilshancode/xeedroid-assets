@@ -68,7 +68,15 @@
         ? [...window.XEEDROID_ARCHIVE_VIDEOS]
         : [];
       const urlParams = new URLSearchParams(window.location.search);
-      const pageFromUrl = parseInt(urlParams.get('page'), 10);
+      let pageFromUrl = parseInt(urlParams.get('page'), 10);
+      if (isNaN(pageFromUrl) || pageFromUrl <= 0) {
+        try {
+          const savedPage = parseInt(sessionStorage.getItem('xeedroid_video_page'), 10);
+          if (!isNaN(savedPage) && savedPage > 0) {
+            pageFromUrl = savedPage;
+          }
+        } catch (e) {}
+      }
       this.currentPage = (!isNaN(pageFromUrl) && pageFromUrl > 0) ? pageFromUrl : 1;
       this.pageSize = 12;
       const sortFromUrl = urlParams.get('sort');
@@ -292,6 +300,9 @@
 
     goToPage(page, updateUrl = true, smoothScroll = true) {
       this.currentPage = page;
+      try {
+        sessionStorage.setItem('xeedroid_video_page', this.currentPage);
+      } catch (e) {}
       if (updateUrl) {
         const url = new URL(window.location.href);
         if (this.currentPage > 1) {
@@ -356,7 +367,7 @@
               <a href="/video-watch?v=${escapeHTML(video.id)}" data-youtube-id="${escapeHTML(video.id)}">${escapeHTML(video.title)}</a>
             </h3>
             <div class="video-card-meta">
-              <span>${escapeHTML(video.date || video.relativeDate || 'Recent')}</span>
+              <span>${escapeHTML(video.relativeDate || video.date || "Recent")}</span>
             </div>
           </div>
         </article>

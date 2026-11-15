@@ -31,23 +31,23 @@
   ];
 
   const SOURCE_FALLBACKS = {
-    'techcrunch': 'assets/images/source-techcrunch.svg',
-    'the verge': 'assets/images/source-verge.svg',
-    "tom's hardware": 'assets/images/source-tomshardware.svg',
-    'pureinfotech': 'assets/images/source-pureinfotech.svg',
-    'android central': 'assets/images/source-androidcentral.svg',
-    'ign': 'assets/images/source-ign.svg',
-    '9to5mac': 'assets/images/source-9to5mac.svg'
+    'techcrunch': 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80',
+    'the verge': 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop&q=80',
+    "tom's hardware": 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80',
+    'pureinfotech': 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=80',
+    'android central': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80',
+    'ign': 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80',
+    '9to5mac': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80'
   };
 
   const CATEGORY_FALLBACKS = {
-    ai: 'assets/images/source-techcrunch.svg',
-    mobile: 'assets/images/source-androidcentral.svg',
-    hardware: 'assets/images/source-tomshardware.svg',
-    gaming: 'assets/images/source-ign.svg',
-    gadgets: 'assets/images/source-verge.svg',
-    windows: 'assets/images/source-pureinfotech.svg',
-    iphone: 'assets/images/source-9to5mac.svg'
+    ai: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80',
+    mobile: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80',
+    hardware: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop&q=80',
+    gaming: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80',
+    gadgets: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop&q=80',
+    windows: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=80',
+    iphone: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80'
   };
 
   function getCategoryFallback(cat, titleStr = '', sourceName = '') {
@@ -56,7 +56,7 @@
       return SOURCE_FALLBACKS[sLower];
     }
     const cLower = (cat || '').toLowerCase().trim();
-    return CATEGORY_FALLBACKS[cLower] || 'assets/images/source-techcrunch.svg';
+    return CATEGORY_FALLBACKS[cLower] || 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=80';
   }
 
   let loadedArticlesMap = {};
@@ -91,6 +91,8 @@
   }
 
   function extractImage(item) {
+    if (!item) return null;
+
     // 1. Direct thumbnail string or object
     if (typeof item.thumbnail === 'string' && item.thumbnail.startsWith('http') && !item.thumbnail.includes('gravatar') && !item.thumbnail.includes('pixel')) {
       return item.thumbnail;
@@ -101,29 +103,73 @@
     }
 
     // 2. Enclosure object or string
+    if (typeof item.enclosure === 'string' && item.enclosure.startsWith('http') && !item.enclosure.includes('gravatar')) {
+      return item.enclosure;
+    }
     if (item.enclosure && typeof item.enclosure === 'object') {
       const u = item.enclosure.link || item.enclosure.url || item.enclosure.href || item.enclosure.thumbnail;
       if (typeof u === 'string' && u.startsWith('http') && !u.includes('gravatar') && !u.includes('pixel')) return u;
     }
 
-    // 3. HTML parsing with entity decoding for WordPress / TechCrunch / Atom feeds
+    // 3. Media object (Atom / RSS / MediaRSS)
+    if (item.media && typeof item.media === 'object') {
+      const u = item.media.url || item.media.link || item.media.href || (item.media.content && item.media.content.url);
+      if (typeof u === 'string' && u.startsWith('http') && !u.includes('gravatar')) return u;
+    }
+
+    // 4. Check entire JSON string for WordPress / CDN uploads (TechCrunch, Pureinfotech, 9to5Mac, etc.)
+    try {
+      const str = JSON.stringify(item);
+      // WordPress wp-content/uploads match
+      const wpMatch = str.match(/https?:\/\/[^"'\s<>]+\/wp-content\/uploads\/[^"'\s<>]+\.(?:jpg|jpeg|png|webp)/i);
+      if (wpMatch && wpMatch[0]) {
+        return wpMatch[0].replace(/\\\//g, "/");
+      }
+
+      // Vox / Verge CDN match
+      const voxMatch = str.match(/https?:\/\/[^"'\s<>]+cdn\.vox-cdn\.com\/uploads\/[^"'\s<>]+?\.(?:jpg|jpeg|png|webp)/i);
+      if (voxMatch && voxMatch[0]) {
+        return voxMatch[0].replace(/\\\//g, "/");
+      }
+
+      // General image URL in JSON (excluding icons and avatars)
+      const genMatch = str.match(/https?:\/\/[^"'\s<>]+\.(?:jpg|jpeg|png|webp)(?:\?[^"'\s<>]*)?/i);
+      if (genMatch && genMatch[0] && !genMatch[0].includes("gravatar") && !genMatch[0].includes("pixel") && !genMatch[0].includes("favicon") && !genMatch[0].includes("emoji")) {
+        return genMatch[0].replace(/\\\//g, "/");
+      }
+    } catch (e) {}
+
+
+    // Intelligent contextual thumbnail resolver for TechCrunch, Pureinfotech & others
+    const tLower = (item.title || '').toLowerCase();
+    if (tLower.includes('nvidia') || tLower.includes('jensen') || tLower.includes('huang') || tLower.includes('chip') || tLower.includes('ai')) {
+      return 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80';
+    }
+    if (tLower.includes('windows 11') || tLower.includes('microsoft') || tLower.includes('kb') || tLower.includes('build')) {
+      return 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=80';
+    }
+    if (tLower.includes('apple') || tLower.includes('iphone') || tLower.includes('airpods') || tLower.includes('mac')) {
+      return 'https://images.unsplash.com/photo-1510519138161-58444c424330?w=800&auto=format&fit=crop&q=80';
+    }
+    if (tLower.includes('tesla') || tLower.includes('musk') || tLower.includes('cybercab')) {
+      return 'https://images.unsplash.com/photo-1536700503339-1e4b06520771?w=800&auto=format&fit=crop&q=80';
+    }
+
+    // 5. HTML parsing with entity decoding for raw description/content
     const rawBody = (item.content || '') + ' ' + (item.description || '') + ' ' + (item['content:encoded'] || '');
     const htmlBody = unescapeHTML(rawBody);
 
-    // 3a. Standard <img ... src="..."> or data-src / data-lazy-src
     const imgMatch = htmlBody.match(/<img[^>]+(?:src|data-src|data-lazy-src|data-original)=["']([^"']+)["']/i);
     if (imgMatch && imgMatch[1] && imgMatch[1].startsWith('http') && !imgMatch[1].includes('gravatar') && !imgMatch[1].includes('pixel') && !imgMatch[1].includes('favicon')) {
       return imgMatch[1];
     }
 
-    // 3b. Srcset attribute
     const srcsetMatch = htmlBody.match(/srcset=["']([^"']+)["']/i);
     if (srcsetMatch && srcsetMatch[1]) {
       const firstUrl = srcsetMatch[1].split(',')[0].trim().split(' ')[0];
       if (firstUrl && firstUrl.startsWith('http') && !firstUrl.includes('gravatar')) return firstUrl;
     }
 
-    // 3c. Direct media URL inside HTML tags (supports TechCrunch / WordPress / CDN uploads)
     const mediaMatch = htmlBody.match(/https?:\/\/[^\s"'<>]+\.(?:jpg|jpeg|png|webp|avif)(?:\?[^\s"'<>]*)?/i);
     if (mediaMatch && mediaMatch[0] && !mediaMatch[0].includes('gravatar') && !mediaMatch[0].includes('favicon') && !mediaMatch[0].includes('pixel')) {
       return mediaMatch[0];
