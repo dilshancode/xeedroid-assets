@@ -6,7 +6,7 @@
 (function(window) {
   'use strict';
 
-  const CACHE_KEY = 'xeedroid_live_news_v10';
+  const CACHE_KEY = 'xeedroid_live_news_v12';
   const CACHE_TTL_MS = 15 * 60 * 1000;
 
   try {
@@ -140,20 +140,7 @@
     } catch (e) {}
 
 
-    // Intelligent contextual thumbnail resolver for TechCrunch, Pureinfotech & others
-    const tLower = (item.title || '').toLowerCase();
-    if (tLower.includes('nvidia') || tLower.includes('jensen') || tLower.includes('huang') || tLower.includes('chip') || tLower.includes('ai')) {
-      return 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80';
-    }
-    if (tLower.includes('windows 11') || tLower.includes('microsoft') || tLower.includes('kb') || tLower.includes('build')) {
-      return 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=80';
-    }
-    if (tLower.includes('apple') || tLower.includes('iphone') || tLower.includes('airpods') || tLower.includes('mac')) {
-      return 'https://images.unsplash.com/photo-1510519138161-58444c424330?w=800&auto=format&fit=crop&q=80';
-    }
-    if (tLower.includes('tesla') || tLower.includes('musk') || tLower.includes('cybercab')) {
-      return 'https://images.unsplash.com/photo-1536700503339-1e4b06520771?w=800&auto=format&fit=crop&q=80';
-    }
+
 
     // 5. HTML parsing with entity decoding for raw description/content
     const rawBody = (item.content || '') + ' ' + (item.description || '') + ' ' + (item['content:encoded'] || '');
