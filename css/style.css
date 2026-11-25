@@ -1753,6 +1753,22 @@ html.dark body .text-gradient-purple {
   .hero-content h1 { font-size: clamp(2.15rem, 9vw, 3.2rem); }
   .hero-action-buttons .btn { flex: 1 1 100% !important; }
   .video-card:hover, .lead-article-card:hover, .dispatch-mini-card:hover, .topic-cluster-card:hover { transform: none; }
+  
+  /* Mobile Smooth Scroll & GPU Performance */
+  .lead-article-card, .post-item-card, .dispatch-mini-card {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 420px;
+    transform: translateZ(0);
+  }
+  .badge-dark-glass {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(12, 14, 20, 0.94) !important;
+  }
+  .lead-article-image img {
+    transform: none !important;
+    will-change: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

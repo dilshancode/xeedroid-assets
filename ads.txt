@@ -1,4 +1,4 @@
 # Google AdSense authorized digital sellers
 # Format: <Field #1>, <Field #2>, <Field #3>, <Field #4>
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-1681293952815817, DIRECT, f08c47fec0942fa0
 
