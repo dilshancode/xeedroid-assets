@@ -1,9 +1,33 @@
 /**
  * XEEDROID Official Long Video Library
- * Strictly curated modern tutorials only (older discontinued/Sinhala vlogs removed).
- * Automatically updates when new tutorials are uploaded.
+ * Strictly curated modern tutorials only.
+ * Automatically synced from YouTube on 2026-11-16T03:26:28.269Z.
  */
 window.XEEDROID_ARCHIVE_VIDEOS = [
+  {
+    "id": "1T1QibpF4kY",
+    "title": "How to Free Up Space in Premiere Pro #shorts #tutorial #premierepro #windows11 #youtubeshorts #pc",
+    "date": "Jan 10, 2026",
+    "relativeDate": "10mo ago",
+    "timestamp": 1768059004000,
+    "thumbnail": "https://i.ytimg.com/vi/1T1QibpF4kY/hqdefault.jpg"
+  },
+  {
+    "id": "8Aw1LzC8XbI",
+    "title": "How to Create a Virtual Hard Disk on Windows 11 #windows #windows11 #youtubeshorts #shorts #pc",
+    "date": "Dec 29, 2025",
+    "relativeDate": "10mo ago",
+    "timestamp": 1767038408000,
+    "thumbnail": "https://i.ytimg.com/vi/8Aw1LzC8XbI/hqdefault.jpg"
+  },
+  {
+    "id": "Q7naqeyBkdk",
+    "title": "How To FIX Internet Connection Issues in Windows 11 #windows11 #youtubeshorts #shorts #pc",
+    "date": "Dec 16, 2025",
+    "relativeDate": "11mo ago",
+    "timestamp": 1765915222000,
+    "thumbnail": "https://i.ytimg.com/vi/Q7naqeyBkdk/hqdefault.jpg"
+  },
   {
     "id": "tuZVUo31Cd0",
     "title": "Windows 11 AI Is Bloat: Here’s How To Remove It",
@@ -32,7 +56,7 @@ window.XEEDROID_ARCHIVE_VIDEOS = [
     "id": "1y2HNUK2fbc",
     "title": "Affinity Designer: The Photoshop Alternative You NEED",
     "date": "Dec 18, 2025",
-    "relativeDate": "10mo ago",
+    "relativeDate": "11mo ago",
     "timestamp": 1766080800000,
     "thumbnail": "https://i.ytimg.com/vi/1y2HNUK2fbc/hqdefault.jpg"
   },
